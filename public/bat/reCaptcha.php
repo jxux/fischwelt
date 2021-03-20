@@ -5,7 +5,7 @@ require_once 'ReCaptcha/autoload.php';
 // Register You API keys at https://www.google.com/recaptcha/admin
 // And write it here
 $siteKey = '6Leog4caAAAAAAQoevmRvyxIpQjJzhtcXfjXr5Pn';
-$secret = '6Leog4caAAAAAAQoevmRvyxIpQjJzhtcXfjXr5Pn';
+$secret = '6Leog4caAAAAAFmlkB9gyrNngUg0rDOlhgL4ToER';
 
 // reCAPTCHA supported 40+ languages listed here: https://developers.google.com/recaptcha/docs/language
 $lang = 'es-419';
