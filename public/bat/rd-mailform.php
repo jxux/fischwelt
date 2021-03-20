@@ -35,7 +35,7 @@ try {
     if (isset($_POST['form-type'])) {
         switch ($_POST['form-type']){
             case 'contact':
-                $subject = 'A message from your site visitor';
+                $subject = 'Un mensaje del visitante de su sitio';
                 break;
             case 'subscribe':
                 $subject = 'Subscribe request';

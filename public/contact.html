@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,33 @@
     <title>Corporación FischWelt</title>
     <link rel="stylesheet" href="css/tailwind.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
     <div id="app">
         <nav class="bg-white">
+
             <div class="max-w mx-auto px-2 sm:px-6 lg:px-20">
                 <div class="relative flex items-center justify-between h-24">
-    
+
                     <!-- Mobile menu button-->
                     <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <button  v-on:click="menu=!menu" type="button" class="inline-flex items-center justify-center p-2 rounded-md bg-fischwelt-blue text-white hover:text-white hover:bg-fischwelt-gray focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <button v-on:click="menu=!menu" type="button"
+                            class="inline-flex it ems-center justify-center p-2 rounded-md bg-fischwelt-blue text-white hover:text-white hover:bg-fischwelt-gray focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false">
                             <span class="sr-only">Abrir Menu</span>
-    
-                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
-    
-                            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+
+                            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
 
@@ -38,9 +48,10 @@
                                 <img class="hidden lg:block h-16 w-auto" src="img/logo-largo.svg" alt="Workflow">
                             </a>
                         </div>
-    
+
                         <div class="hidden sm:block sm:ml-6">
-                            <div class="flex  space-x-1 md:space-x-6 lg:space-x-8 md:pl-6 2xl:pl-24 justify-around items-center m-5">
+                            <div
+                                class="flex  space-x-1 md:space-x-6 lg:space-x-8 md:pl-6 2xl:pl-24 justify-around items-center m-5">
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="index.html" class="link">Inicio</a>
                                 <a href="about.html" class="link">Nosotros</a>
@@ -51,17 +62,21 @@
                     </div>
 
                     <!-- Idiomas -->
-                    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-    
-                        <button class="p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                        <button
+                            class="p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                             <span class="sr-only">Español</span>
-                                <img class="h-6 w-6" src="img/espana.svg" alt="">
+                            <img class="h-6 w-6" src="img/espana.svg" alt="">
                         </button>
-            
+
                         <!-- Profile dropdown -->
                         <div class="ml-3 relative">
                             <div>
-                                <button type="button" class="p-1 flex text-sm  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-expanded="false" aria-haspopup="true">
+                                <button type="button"
+                                    class="p-1 flex text-sm  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                    id="user-menu" aria-expanded="false" aria-haspopup="true">
                                     <span class="sr-only">Ingles</span>
                                     <img class="h-6 w-6" src="img/ingles.svg" alt="">
                                 </button>
@@ -71,21 +86,150 @@
 
                 </div>
             </div>
-        
-    
+
+
             <!-- Menu celular, show/hide -->
             <div class="sm:hidden" v-if="menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="#" class="bg-fischwelt-yellow text-white block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
-                    <a href="#" class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Nosotros</a>
-                    <a href="#" class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Productos</a>
-                    <a href="#" class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+                    <a href="#"
+                        class="bg-fischwelt-yellow text-white block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+                    <a href="#"
+                        class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Nosotros</a>
+                    <a href="#"
+                        class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Productos</a>
+                    <a href="#"
+                        class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
                 </div>
             </div>
         </nav>
-     
 
+        <div class="bg-olas">
+            <div class="md:grid md:grid-cols-2 md:gap-6 p-16">
+                <div class="text-fischwelt-blue">
+                    <div class="flex justify-center">
+                        <img class="h-40 mt-14" src="img/logo.svg" alt="">
+                    </div>
+                    <div class="p-10 flex justify-center">
+                        <label class=" font-medium">---------------------------------------------------</label>
+                    </div>
+                    <div class="py-10 px-52">
+                        <h1 class="font-extrabold">CORPORACION FISCHWELT S.A.C.</h1>
+                        <p><strong>RUC: </strong>2024585957</p>
+                        <br>
+                        <p>AV. PARCELA 2 -A N° 115  FND TABOADA - PROV. CONST. DEL CALLAO - PERÚ</p>
+                        <br>
+                        <h1 class="font-extrabold">Contacto: </h1>
+                        <p><strong>Celular: </strong>+51 951 965 242</p>
+                        <br>
+                        <p><strong>E-mail:</strong> jmarinas@corpfischwelt.com</p>
+                    </div>
+                </div>
+
+                
+            <!-- Formulario de contacto  -->
+                <div class="mt-1 md:mt-0">
+                    <form action="bat/rd-mailform.php" method="POST">
+                        <div class="shadow sm:overflow-hidden border-fischwelt-blue border-8">
+                            <div class="px-4 py-5 bg-white space-y-6 sm:pt-10 sm:px-16">
+                                <div class="grid grid-cols-4 gap-6">
+                                    <div class="col-span-3">
+                                        <label class="block text-lg text-fischwelt-blue mb-1">Empresa </label>
+                                        <div class="mt-1 flex rounded-md ">
+                                            <input type="text" name="company" id="company" 
+                                            class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-4 gap-6">
+                                    <div class="col-span-3">
+                                        <label class="block text-lg text-fischwelt-blue mb-1">País </label>
+                                        <div class="mt-1 flex rounded-md ">
+                                            <input type="text" name="company" id="company" 
+                                            class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-4 gap-6">
+                                    <div class="col-span-3">
+                                        <label class="block text-lg text-fischwelt-blue mb-1">Nombre </label>
+                                        <div class="mt-1 flex items-center">
+                                            <input type="text" name="name" id="name" 
+                                                class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                            
+                                            <input type="text" name="last-name" id="last-name" 
+                                                class="ml-4 p-3 flex-1 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="grid grid-cols-4 gap-6">
+                                    <label class="block text-lg text-fischwelt-blue mb-1">Nombre </label>
+                                    <div class="col-span- md:col-span-1">
+
+                                        <div class="mt-1 flex rounded-md">
+                                            <input type="text" name="name" id="name" 
+                                            class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+
+                                    </div>
+
+                                    <div class="col-span-2 md:col-span-1"></div>
+                                        <div class="mt-1 flex rounded-md">
+                                            <input type="text" name="last-name" id="last-name" 
+                                            class="md:ml-4 p-3 flex-1 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                        </div>
+                                    </div>
+                                    <p class="mt-2 text-sm text-gray-500">
+                                        Brief description for your profile. URLs are hyperlinked.
+                                    </p>
+                                </div> -->
+
+                                <div class="grid grid-cols-4 gap-6">
+                                    <div class="col-span-3">
+                                        <label class="block text-lg text-fischwelt-blue mb-1">Correo electrónico </label>
+                                        <div class="mt-1 flex rounded-md ">
+                                            <input type="text" name="email" id="email" 
+                                            class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="grid grid-cols-4 gap-6">
+                                    <div class="col-span-3">
+                                        <label class="block text-lg text-fischwelt-blue mb-1">Número de teléfono </label>
+                                        <div class="mt-1 flex rounded-md ">
+                                            <input type="text" name="phone" id="phone" 
+                                            class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-lg text-fischwelt-blue mb-1">Mensaje </label>
+
+                                    <div class="mt-1">
+                                        <textarea id="message" name="message" rows="6" 
+                                        class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md block w-full text-xl sm:text-sm"></textarea>
+                                    </div>
+                                </div>
+                                <div class="pt-4 text-left ">
+                                    <div class="form-wrap text-left form-validation-left">
+                                        <!-- <div class="recaptcha" id="captcha1" data-sitekey="6Ld0f4caAAAAAKYwRbsEJxKp7c_oLFl-3xyt4_K_"></div> -->
+                                        <div class="g-recaptcha" data-sitekey="6Leog4caAAAAAAQoevmRvyxIpQjJzhtcXfjXr5Pn"></div>
+                                    </div>
+                                    <button type="submit" class="mt-5 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm rounded-xl text-white bg-fischwelt-blue hover:bg-fischwelt-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        Enviar
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 bg-fischwelt-blue">
@@ -119,10 +263,9 @@
             </div>
         </footer>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/app.js"></script>
-
 </body>
 
 </html>
