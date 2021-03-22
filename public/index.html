@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporación FischWelt</title>
+    <title>Corporación FischWelt | Inicio</title>
     <link rel="stylesheet" href="css/tailwind.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 <body>
     <div id="app">
-        <nav class="bg-white">
+        <nav class="bg-white shadow-md">
             <div class="max-w mx-auto px-2 sm:px-6 lg:px-20">
                 <div class="relative flex items-center justify-between h-24">
     
@@ -33,7 +33,7 @@
                     <!-- logo y navbar -->
                     <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div class="flex-shrink-0 flex items-center">
-                            <a href="#">
+                            <a href="index.html">
                                 <img class="block lg:hidden h-16 w-auto" src="img/logo.svg" alt="Workflow">
                                 <img class="hidden lg:block h-16 w-auto" src="img/logo-largo.svg" alt="Workflow">
                             </a>
@@ -44,7 +44,7 @@
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="index.html" class="active">Inicio</a>
                                 <a href="about.html" class="link">Nosotros</a>
-                                <a href="#" class="link">Productos</a>
+                                <a href="products.html" class="link">Productos</a>
                                 <a href="contact.html" class="link">Contacto</a>
                             </div>
                         </div>
@@ -77,10 +77,10 @@
             <div class="sm:hidden" v-if="menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="#" class="bg-fischwelt-yellow text-white block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
-                    <a href="#" class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Nosotros</a>
-                    <a href="#" class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Productos</a>
-                    <a href="#" class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+                    <a href="index.html" class="activeMobile">Inicio</a>
+                    <a href="about.html" class="linkMobile">Nosotros</a>
+                    <a href="products.html" class="linkMobile">Productos</a>
+                    <a href="contact.html" class="linkMobile">Contacto</a>
                 </div>
             </div>
         </nav>
@@ -88,26 +88,30 @@
         <div class="relative">
             <div class="mx-auto">
                 
-                <div class="relative z-10 pb-8 lg:bg-fischwelt-blue lg:bg-opacity-60 sm:pb-16 md:pb-20 lg:max-h-2xl lg:w-full lg:pb-28 xl:pb-72">
-        
-                    <main class="mx-auto max-w-7xl px-4 sm:px-6 pt-10 lg:pt-20 lg:px-8 xl:pt-28">
+                <div class="relative z-10 sm:pb-6 md:pb-8 lg:max-h-2xl lg:w-full lg:pb-0 ">
+                    <!-- px-4 sm:px-6 pt-10 lg:pt-20 lg:px-8 xl:pt-28 -->
+                    <main class="">
                         <div class="text-center lg:text-left">
-                            <h1 class="text-5xl opacity-100 tracking-tight font-extrabold text-fischwelt-blue md:text-6xl">
-                                <span class="block xl:inline">{{titulo}},</span>
-                                <span class="block text-fischwelt-gray xl:inline">Empresa Peruana</span>
-                            </h1>
-        
-                            <p class="mt-3 text-base text-black sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">con certificación de pesca sostenible.</p>
-        
-                            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                                <div class="rounded-md shadow">
-                                    <a href="#" class="w-full flex items-center justify-center px-6 py-1 border border-transparent text-base font-medium rounded-md text-white bg-fischwelt-blue hover:bg-fischwelt-gray md:py-2 md:text-lg md:px-6">
-                                        Ver más
-                                    </a>
+                            <div class="grid lg:grid-cols-5">
+                                <div class="col-span-3"></div>
+                                <div class="col-span-2 py-8 lg:pl-28 lg:pt-60 lg:bg-fischwelt-blue lg:bg-opacity-30">
+                                    <h1 class="text-5xl opacity-100 tracking-tight font-extrabold text-fischwelt-blue md:text-6xl">
+                                        <span class="block xl:inline">{{titulo}},</span>
+                                        <span class="block text-fischwelt-gray xl:inline">Empresa Peruana</span>
+                                    </h1>
+                
+                                    <p class="mt-3 text-base lg:text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">con certificación de pesca sostenible.</p>
+                
+                                    <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                        <div class="rounded-md shadow">
+                                            <a href="about.html" class="w-full flex items-center justify-center px-6 py-1 border border-transparent text-base font-medium rounded-md text-white bg-fischwelt-blue hover:bg-fischwelt-gray md:py-2 md:text-lg md:px-6">
+                                                Ver más
+                                            </a>
+                                        </div>
+                                
+                                    </div>
                                 </div>
-                        
                             </div>
-        
                         </div>
                     </main>
                     
@@ -120,40 +124,79 @@
             </div>
         </div>
 
+        <!-- <div class="max-auto">
+            
+        </div> -->
+        <div class="bg-olas flex justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <div class="pt-16 px-12">
+                    <a class="-m-3 p-3 flex items-start rounded-lg px-8">
+                        <img class="flex-shrink-0 h-10 w-10" src="img/ansuelo.svg" alt="">
+                        <div class="ml-4 mb-8">
+                            <p class="mb-6 text-fischwelt-blue font-bold text-xl uppercase">
+                                COMPROMISO CON LA PESCA RESPONSABLE
+                            </p>
+                            <ul class="list-disc list-inside text-fischwelt-blue font-normal py-2 rounded-md">
+                                <li>Certifcado de Pesca responsable</li>
+                                <li>Certifcado Friend of the Sea</li>
+                                <li>Certifcado Dolphin Safe por EII</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
 
-        <div class="overflow-hidden bg-olas p-10">
+                <div class="pt-16 px-12">
+                    <a class="-m-3 p-3 flex items-start overflow-hidden px-8">
+                        <img class="flex-shrink-0 h-10 w-10" src="img/ansuelo.svg" alt="">
+                        <div class="ml-4 mb-8">
+                            <p class="mb-6 text-fischwelt-blue font-bold text-xl uppercase">COMPROMISO CON LA CALIDAD</p>
+                            <ul class="list-disc list-inside text-fischwelt-blue font-normal py-2 rounded-md">
+                                <li>Sistema HACCP implementado en toda la flota.</li>
+                                <li>Continuas inversiones</li>
+                                <li>Gran equipo de profesionales</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
 
-            <a class="-m-3 p-3 flex items-start rounded-lg ">
+                <div class="pt-16 px-12">
+                    <a class="-m-3 p-3 flex items-start rounded-lg px-8">
+                        <img class="flex-shrink-0 h-10 w-10" src="img/ansuelo.svg" alt="">
+                        <div class="ml-4 mb-8">
+                            <p class="mb-6 text-fischwelt-blue font-bold text-xl uppercase">COMPROMISO CON EL CLIENTE</p>
+                            <ul class="list-disc list-inside text-fischwelt-blue font-normal py-2 rounded-md">
+                                <li>Suministro mundial</li>
+                                <li>Seriedad y fiabilidad</li>
+                                <li>Profesionalismo y cuidado</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="overflow-hidden bg-olas lg:p-10">
+            <a class="m-3 p-3 flex items-start rounded-lg ">
                 <img class="flex-shrink-0 h-10 w-10" src="img/ansuelo.svg" alt="">
                 
-                <div class="ml-4 mb-8">
-                    <p class="text-fischwelt-blue font-semibold text-3xl uppercase">
-                        nosotros
-                    </p>
-                    <p class="mt-1 text-md text-base p-4">
-                        FISCHWELT. es una empresa especializada en el Proceso y Exportación de pescado fresco y congelado desde Lima - Perú, con certificaciones <strong>FDA</strong>, <strong>MSP</strong>, <strong>HACCP</strong>, <strong>GMP</strong>. Nuestra experiencia nos permite ubicar el producto a diferentes países entre ellos. CHINA, ESPAÑA, KOREA, TAILANDIA, TAIWAN.
-                    </p>
-                    <p class="mt-1 text-md text-base p-4">
-                        Efectuar nuestra actividad económica con responsabilidad y equidad entre personas y medio ambiente, con estándares de calidad y productividad, buscando Cumplir con los requisitos del cliente y garantizar la salud pública de los consumidores en nuestros mercados a través de productos confiables.
-                    </p>
-                    <p class="mt-1 text-md text-base p-4">
-                        Ser un líder en el mercado de la industria pesquera con personal capacitado e Infraestructura física adecuada, equipos y maquinaras modernas. Nos caracteriza para proporcionar un servicio excelente y un producto de calidad.
-                    </p>
+                <div class="lg:ml-4 lg:mb-8">
+                    <p class="text-fischwelt-blue font-semibold text-3xl uppercase">Nuestros Mercados</p>
+                    <p class="mt-1 text-md text-base p-4">FISCHWELT. es una empresa especializada en el Proceso y Exportación de pescado fresco y congelado desde Lima - Perú, con certificaciones <strong>FDA</strong>, <strong>MSP</strong>, <strong>HACCP</strong>, <strong>GMP</strong>. Nuestra experiencia nos permite ubicar el producto a diferentes países entre ellos. CHINA, ESPAÑA, KOREA, TAILANDIA, TAIWAN.</p>
                 </div>
             </a>
 
-
             <!-- <p class="text-center font-flow leading-5 text-3xl text-rose-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis fugit, enim molestiae praesentium eveniet, recusandae et error beatae facilis ex harum consequuntur, quia pariatur non. Doloribus illo, ullam blanditiis ab.</p> -->
             <div class="flex justify-center">
-                <div class="">
-                    <img class="h-96" src="img/peru.svg" alt="">
+                <div class="w-full -my-56 sm:-my-52 md:-my-32 lg:-my-28 xl:-my-16">
+                    <img class="h-screen" src="img/mundo.svg" alt="">
                 </div>
             </div>
         </div>
 
 
         <footer>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 bg-fischwelt-blue">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-2 bg-fischwelt-blue">
                 <div class="flex items-center text-white">
                     <div class="p-8">
                         <h1 class="font-extrabold">CORPORACION FISCHWELT S.A.C.</h1>
@@ -179,7 +222,7 @@
             </div>
             <div class="grib grid-cols-1 bg-fischwelt-blue">
                 <div class="flex items-center justify-center text-white">
-                    <p>STIGold 2021</p>
+                    <p>Copyright © 2021 STIGold All rights reserved.</p>
                 </div>
             </div>
         </footer>

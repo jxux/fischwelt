@@ -14,3 +14,17 @@
     @apply scale-110 bg-fischwelt-yellow text-white
 
 }
+
+
+.activeMobile {
+    @apply bg-fischwelt-yellow text-white block px-3 py-2 rounded-md text-base font-medium
+}
+
+.linkMobile{
+    @apply  block px-3 py-2 rounded-md text-base font-medium
+}
+
+.linkMobile:hover {
+    @apply text-white bg-fischwelt-yellow
+
+}

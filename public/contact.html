@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporación FischWelt</title>
+    <title>Corporación FischWelt | Contactanos</title>
     <link rel="stylesheet" href="css/tailwind.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -43,7 +43,7 @@
                     <!-- logo y navbar -->
                     <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                         <div class="flex-shrink-0 flex items-center">
-                            <a href="#">
+                            <a href="index.html">
                                 <img class="block lg:hidden h-16 w-auto" src="img/logo.svg" alt="Workflow">
                                 <img class="hidden lg:block h-16 w-auto" src="img/logo-largo.svg" alt="Workflow">
                             </a>
@@ -55,7 +55,7 @@
                                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                                 <a href="index.html" class="link">Inicio</a>
                                 <a href="about.html" class="link">Nosotros</a>
-                                <a href="#" class="link">Productos</a>
+                                <a href="products.html" class="link">Productos</a>
                                 <a href="contact.html" class="active">Contacto</a>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                         <div class="ml-3 relative">
                             <div>
                                 <button type="button"
-                                    class="p-1 flex text-sm  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                    class="p-1 flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                                     id="user-menu" aria-expanded="false" aria-haspopup="true">
                                     <span class="sr-only">Ingles</span>
                                     <img class="h-6 w-6" src="img/ingles.svg" alt="">
@@ -92,28 +92,63 @@
             <div class="sm:hidden" v-if="menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="#"
-                        class="bg-fischwelt-yellow text-white block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
-                    <a href="#"
-                        class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Nosotros</a>
-                    <a href="#"
-                        class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Productos</a>
-                    <a href="#"
-                        class="hover:bg-fischwelt-yellow hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+                    <a href="index.html" class="linkMobile">Inicio</a>
+                    <a href="about.html" class="linkMobile">Nosotros</a>
+                    <a href="products.html"          class="linkMobile">Productos</a>
+                    <a href="contact.html" class="activeMobile">Contacto</a>
                 </div>
             </div>
         </nav>
 
+        <div class="relative">
+            <div class="mx-auto">
+                
+                <div class="relative z-10 sm:pb-6 md:pb-8 lg:max-h-2xl lg:w-full lg:pb-0 ">
+                    <!-- px-4 sm:px-6 pt-10 lg:pt-20 lg:px-8 xl:pt-28 -->
+                    <main class="">
+                        <div class="text-center lg:text-left">
+                            <div class="grid grid-cols-1 lg:grid-cols-5">
+                                <div class="col-span-3"></div>
+                                <div class="col-span-2 py-8 lg:pl-28 lg:pt-60 lg:bg-fischwelt-blue lg:bg-opacity-30">
+                                    <h1 class="text-5xl opacity-100 py-20 tracking-tight font-extrabold text-fischwelt-blue lg:text-white md:text-6xl">
+                                        <span class="block xl:inline">Contactanos</span>
+                                    </h1>
+                
+                                    <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                        <div class="rounded-md shadow">
+                                            <!-- <a href="about.html" class="w-full flex items-center justify-center px-6 py-1 border border-transparent text-base font-medium rounded-md text-white bg-fischwelt-blue hover:bg-fischwelt-gray md:py-2 md:text-lg md:px-6">
+                                                Ver más
+                                            </a> -->
+                                        </div>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    
+                </div>
+        
+                <div class="lg:absolute lg:inset-y-0 lg:left-0 ">
+                    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="img/contactanos.jpg" alt="">
+                </div>
+        
+            </div>
+        </div>
+
         <div class="bg-olas">
-            <div class="md:grid lg:grid-cols-2 md:gap-6 p-16">
+            <div class="md:grid lg:grid-cols-2 md:gap-6 p-8 md:p-16">
                 <div class="text-fischwelt-blue">
                     <div class="flex justify-center">
                         <img class="h-40 mt-14" src="img/logo.svg" alt="">
                     </div>
                     <div class="p-10 flex justify-center">
-                        <label class="font-medium">---------------------------------------------------</label>
+                        <label  class="block lg:hidden font-medium">----------------------------------------</label>
+                        <label  class="hidden lg:block  font-medium">---------------------------------------------------</label>
+                        <!-- <img class="block lg:hidden h-16 w-auto" src="img/logo.svg" alt="Workflow">
+                        <img class="hidden lg:block h-16 w-auto" src="img/logo-largo.svg" alt="Workflow"> -->
                     </div>
-                    <div class="py-8 sm:py-10 px-20 2xl:px-52">
+                    <div class="py-8 sm:py-10 md:px-20 2xl:px-52">
                         <h1 class="font-extrabold">CORPORACION FISCHWELT S.A.C.</h1>
                         <p><strong>RUC: </strong>2024585957</p>
                         <br>
@@ -129,11 +164,11 @@
                 
             <!-- Formulario de contacto  -->
                 <div class="mt-1 md:mt-0">
-                    <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                    <form data-form-output="form-output-global" data-form-type="contact" method="post" action="enviar.php">
                         <div class="shadow sm:overflow-hidden border-fischwelt-blue border-8">
                             <div class="px-4 py-5 bg-white space-y-6 sm:pt-10 sm:px-16">
                                 <div class="grid grid-cols-4 gap-6">
-                                    <div class="col-span-3">
+                                    <div class="col-span-4 md:col-span-3">
                                         <label class="block text-lg text-fischwelt-blue mb-1">Empresa </label>
                                         <div class="mt-1 flex rounded-md ">
                                             <input type="text" name="company" id="company" 
@@ -143,17 +178,16 @@
                                 </div>
 
                                 <div class="grid grid-cols-4 gap-6">
-                                    <div class="col-span-3">
+                                    <div class="col-span-4 md:col-span-3">
                                         <label class="block text-lg text-fischwelt-blue mb-1">País </label>
                                         <div class="mt-1 flex rounded-md ">
-                                            <input type="text" name="company" id="company" 
-                                            class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                            <input type="text" name="country" id="country" class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="grid grid-cols-4 gap-6">
-                                    <div class="col-span-3">
+                                    <div class="col-span-4 md:col-span-3">
                                         <label class="block text-lg text-fischwelt-blue mb-1">Nombre </label>
                                         <div class="mt-1 flex items-center">
                                             <input type="text" name="name" id="name" 
@@ -186,22 +220,20 @@
                                 </div> -->
 
                                 <div class="grid grid-cols-4 gap-6">
-                                    <div class="col-span-3">
+                                    <div class="col-span-4 md:col-span-3">
                                         <label class="block text-lg text-fischwelt-blue mb-1">Correo electrónico </label>
                                         <div class="mt-1 flex rounded-md ">
-                                            <input id="contact-email" type="email" name="email" data-constraints="@Required @Email"
-                                            class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                            <input id="contact-email" type="email" name="email" data-constraints="@Required @Email" class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
                                         </div>
                                     </div>
                                 </div>
 
 
                                 <div class="grid grid-cols-4 gap-6">
-                                    <div class="col-span-3">
+                                    <div class="col-span-4 md:col-span-3">
                                         <label class="block text-lg text-fischwelt-blue mb-1">Número de teléfono </label>
                                         <div class="mt-1 flex rounded-md ">
-                                            <input type="text" name="phone" id="phone" 
-                                            class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
+                                            <input type="text" name="phone" id="phone" class="flex-1 p-3 border focus:border-8 focus:outline-none focus:ring focus:border-fischwelt-blue border-gray-300 bg-gray-200 rounded-md h-10 block w-full text-xl sm:text-sm">
                                         </div>
                                     </div>
                                 </div>
@@ -217,7 +249,7 @@
                                 <div class="pt-4 text-left ">
                                     <div class="form-wrap text-left form-validation-left">
                                         <!-- <div class="recaptcha" id="captcha1" data-sitekey="6Ld0f4caAAAAAKYwRbsEJxKp7c_oLFl-3xyt4_K_"></div> -->
-                                        <div class="g-recaptcha" data-sitekey="6Leog4caAAAAAAQoevmRvyxIpQjJzhtcXfjXr5Pn"></div>
+                                        <!-- <div class="g-recaptcha" data-sitekey="6Leog4caAAAAAAQoevmRvyxIpQjJzhtcXfjXr5Pn"></div> -->
                                     </div>
                                     <button type="submit" class="mt-5 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm rounded-xl text-white bg-fischwelt-blue hover:bg-fischwelt-gray focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                         Enviar
@@ -284,7 +316,7 @@
         </div>
 
         <footer>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 bg-fischwelt-blue">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-2 bg-fischwelt-blue">
                 <div class="flex items-center text-white">
                     <div class="p-8">
                         <h1 class="font-extrabold">CORPORACION FISCHWELT S.A.C.</h1>
@@ -310,7 +342,7 @@
             </div>
             <div class="grib grid-cols-1 bg-fischwelt-blue">
                 <div class="flex items-center justify-center text-white">
-                    <p>STIGold 2021</p>
+                    <p>Copyright © 2021 STIGold All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -318,7 +350,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/script.js"></script>
 </body>
 
 </html>
